@@ -47,7 +47,7 @@ getWeather = async (e) => {
     country:undefined,
     wind:undefined,
     description: undefined,
-    error:"please enter the value"
+    error:"please enter the correct value"
 
 
   })
@@ -56,21 +56,31 @@ getWeather = async (e) => {
 render () {
   return(
     <div>
-      <Titles />
+     
+        <div className='header'>
+           <Titles />
+        </div>  
+        <div className='container'>
+            <div className='form'>
       <Form getWeather={this.getWeather}/>
-      <Weather 
-      
-      temperature={this.state.temperature}
-      humidity={this.state.humidity}
-      city={this.state.city}
-     country ={this.state.country}
-      wind={this.state.wind}
-      description={this.state.description}
-      error ={this.state.error}
-
-      
-      />
+      </div>
+                <div className='weather-info'>
+                    <Weather
+                    temperature={this.state.temperature}
+                    humidity={this.state.humidity}
+                    city={this.state.city}
+                    country ={this.state.country}
+                    wind={this.state.wind}
+                    description={this.state.description}
+                    error ={this.state.error}/> 
+                
+                </div>
+        
+            </div>
+         <footer>Copyright Jennifer</footer>
     </div>
+   
+    
   )
 }
 

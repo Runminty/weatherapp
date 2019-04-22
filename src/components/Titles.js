@@ -4,7 +4,7 @@ export default class Titles extends React.Component {
 
 render () {
   return(
-    <div><h1>Weather Finder</h1></div>
+    <div><h1>Visual Weather</h1></div>
   )
 }
 
